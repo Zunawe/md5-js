@@ -146,10 +146,10 @@ function md5(input){
 	C = _reverseBytes(C);
 	D = _reverseBytes(D);
 
-	return _fillZeroesFront((A >>> 0).toString(16)) +
-	       _fillZeroesFront((B >>> 0).toString(16)) +
-	       _fillZeroesFront((C >>> 0).toString(16)) +
-	       _fillZeroesFront((D >>> 0)).toString(16);
+	return padFront((A >>> 0).toString(16)) +
+	       padFront((B >>> 0).toString(16)) +
+	       padFront((C >>> 0).toString(16)) +
+	       padFront((D >>> 0)).toString(16);
 }
 
 /*
@@ -227,8 +227,8 @@ function _reverseBytes(n){
  * A workaround for the lack of a sprintf. Adds leading zeroes to a string
  * until it is 8 characters long.
  */
-function _fillZeroesFront(s){
-	while(s.length < 8){
+function padFront(s, size){
+	while(s.length < size){
 		s = '0' + s;
 	}
 	return s;
