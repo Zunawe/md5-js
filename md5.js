@@ -146,10 +146,10 @@ function md5(input){
 	C = _reverseBytes(C);
 	D = _reverseBytes(D);
 
-	return padFront((A >>> 0).toString(16)) +
-	       padFront((B >>> 0).toString(16)) +
-	       padFront((C >>> 0).toString(16)) +
-	       padFront((D >>> 0)).toString(16);
+	return padFront((A >>> 0).toString(16), 8) +
+	       padFront((B >>> 0).toString(16), 8) +
+	       padFront((C >>> 0).toString(16), 8) +
+	       padFront((D >>> 0).toString(16), 8);
 }
 
 /*
