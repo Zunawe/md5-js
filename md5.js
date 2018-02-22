@@ -233,3 +233,5 @@ function padFront(s, size){
 	}
 	return s;
 }
+
+module.exports = md5;
