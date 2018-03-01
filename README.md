@@ -3,6 +3,8 @@ A function for providing the MD5 hash of a string.
 
 JavaScript is an awful language to write this kind of function in, but the algorithm can be useful for web applications. The script always calls the toString method of whatever input it is given, and will always return a string containing the hash. The file can be adapted for either client-side scripts or server-side programs.
 
+*IMPORTANT: MD5 is **not** a secure hashing function. Do not rely on it for encryption or checksums.*
+
 #### Client-Side
 The functions must be appended to your own file or included before the use of the `md5` function.
 ```
