@@ -8,14 +8,14 @@ The functions must be appended to your own file or included before the use of th
 ```
 <script src='/path/to/md5.js'></script>
 <script>
-	md5('Hello, World!');					// => '65a8e27d8879283831b664bd8b7f0ad4'
+	md5('Hello, World!');                   // => '65a8e27d8879283831b664bd8b7f0ad4'
 
-	['a', 'b', 'c', 'd'].forEach(md5);		// => ['0cc175b9c0f1b6a831c399e269772661',
-											//     '92eb5ffee6ae2fec3ad71c777531578f',
-											//     '4a8a08f09d37b73795649038408b5f33',
-											//     '8277e0910d750195b448797616e091ad']
+	['a', 'b', 'c', 'd'].forEach(md5);      // => ['0cc175b9c0f1b6a831c399e269772661',
+	                                        //     '92eb5ffee6ae2fec3ad71c777531578f',
+	                                        //     '4a8a08f09d37b73795649038408b5f33',
+	                                        //     '8277e0910d750195b448797616e091ad']
 </script>
 ```
 
 #### Server-Side
-The file does not include anything outside the guidelines of ECMAScript 5, so modules for Node.js or any other exporting code must be added (though, the `md5` function is the only function that must be exported).
+This file can be used as a module in Node. The export is just the function.
