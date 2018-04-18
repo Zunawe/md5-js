@@ -5,19 +5,13 @@ JavaScript is an awful language to write this kind of function in, but the algor
 
 *IMPORTANT: MD5 is **not** a secure hashing function. Do not rely on it for encryption or checksums.*
 
-#### Client-Side
-The functions must be appended to your own file or included before the use of the `md5` function.
+#### Use
+The `md5` function is exported as an ECMAScript 6 module.
+```js
+md5('Hello, World!');       // => new Uint8Array([
+                            //        65, a8, e2, 7d,
+                            //        88, 79, 28, 38,
+                            //        31, b6, 64, bd,
+                            //        8b, 7f, 0a, d4
+                            //    ]).buffer
 ```
-<script src='/path/to/md5.js'></script>
-<script>
-	md5('Hello, World!');                   // => '65a8e27d8879283831b664bd8b7f0ad4'
-
-	['a', 'b', 'c', 'd'].forEach(md5);      // => ['0cc175b9c0f1b6a831c399e269772661',
-	                                        //     '92eb5ffee6ae2fec3ad71c777531578f',
-	                                        //     '4a8a08f09d37b73795649038408b5f33',
-	                                        //     '8277e0910d750195b448797616e091ad']
-</script>
-```
-
-#### Server-Side
-This file can be used as a module in Node. The export is just the function.
